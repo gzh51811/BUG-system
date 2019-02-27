@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页</title>
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/reg.css">
+    <script src="../assets/layui/layui.js"></script>
+</head>
+<body>
+    <div id="contain">
+        <ul class="layui-nav layui-nav-tree layui-bg-cyan" lay-filter="test">
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;" style="font-size:24px;">后台管理系统</a>
+            </li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">登录注册</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">登录</a></dd>
+                    <dd><a href="javascript:;">注册</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">商品管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">商品列表</a></dd>
+                    <dd><a href="">商品分类</a></dd>
+                    <dd><a href="">添加商品</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">用户管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">用户列表</a></dd>
+                    <dd><a href="">添加用户</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">订单管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">订单列表</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <div class="right">
+            <span class="layui-breadcrumb">
+                <a href="javascript:;">首页</a>
+                <a href="javascript:;">登录注册</a>
+                <a><cite>注册</cite></a>
+            </span>
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux"></div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码</label>
+                    <div class="layui-input-inline">
+                    <input type="password" name="password" required lay-verify="required" placeholder="请再次输入密码" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux"></div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">性别</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="sex" value="男" title="男">
+                        <input type="radio" name="sex" value="女" title="女" checked>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">爱好</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="hobby" value="篮球" title="篮球">
+                        <input type="checkbox" name="hobby" value="跑步" title="跑步" checked>
+                        <input type="checkbox" name="hobby" value="唱歌" title="唱歌">
+                        <input type="checkbox" name="hobby" value="跳舞" title="跳舞">
+                        <input type="checkbox" name="hobby" value="其它" title="其它">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">注册</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+
+    layui.use('form', function(){
+    var form = layui.form;
+
+    form.on('submit(formDemo)', function(data){
+        layer.msg(JSON.stringify(data.field));
+        return false;
+    });
+})
+</script>
+</html>

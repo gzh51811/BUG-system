@@ -1,0 +1,11 @@
+.layui-nav{
+    height: 800px;
+    float: left;
+}
+.right{
+    float: left;
+}
+.layui-breadcrumb{
+    display: block;
+    padding: 20px 0 20px 20px;
+}
