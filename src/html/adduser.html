@@ -6,21 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>添加用户</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
-    <link rel="stylesheet" href="../css/reg.css">
+    <link rel="stylesheet" href="../css/adduser.css">
     <script src="../assets/layui/layui.js"></script>
 </head>
 <body>
-    <div id="contain">
+    <div id=".layui-container">
         <ul class="layui-nav layui-nav-tree layui-bg-cyan" lay-filter="test">
             <li class="layui-nav-item layui-nav-itemed">
                 <a href="javascript:;" style="font-size:24px;">后台管理系统</a>
-            </li>
-            <li class="layui-nav-item layui-nav-itemed">
-                <a href="javascript:;">登录注册</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="../html/login.html">登录</a></dd>
-                    <dd><a href="../html/reg.html">注册</a></dd>
-                </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">商品管理</a>
@@ -119,10 +112,6 @@
     layui.use('form', function(){
     var form = layui.form;
 
-    form.on('submit(formDemo)', function(data){
-        layer.msg(JSON.stringify(data.field));
-        return false;
-    });
 })
 </script>
 </html>

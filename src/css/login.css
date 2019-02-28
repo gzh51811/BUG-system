@@ -1,11 +1,13 @@
-.layui-nav{
-    height: 800px;
-    float: left;
+#contain{
+    width: 500px;
+    height: auto;
+    border: 2px solid #ccc;
+    padding: 150px;
+    margin: 100px auto;
+    background: url(../img/login.jpg) no-repeat;
+    background-size: 100%;
 }
-.right{
-    float: left;
-}
-.layui-breadcrumb{
-    display: block;
-    padding: 20px 0 20px 20px;
+#contain h1{
+    line-height: 3;
+    text-align: center;
 }
